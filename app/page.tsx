@@ -13,7 +13,7 @@ const PetalRain = dynamic(() => import("./components/PetalRain"), {
 const Countdown = dynamic(() => import("./components/Countdown"), {
   ssr: false,
 });
-const RSVPForm = dynamic(() => import("./components/RSVPForm"), { ssr: false });
+// const RSVPForm = dynamic(() => import("./components/RSVPForm"), { ssr: false });
 const PhotoGallery = dynamic(() => import("./components/PhotoGallery"), {
   ssr: false,
 });
@@ -22,44 +22,44 @@ const MessagesSection = dynamic(() => import("./components/MessagesSection"), {
 });
 
 // ========== Gallery placeholder images (using gradient + emoji) ==========
-const galleryItems = [
-  {
-    id: "g1",
-    label: "The First Meet",
-    bg: "linear-gradient(135deg, #D4A5A5 0%, #C9A96E 100%)",
-    emoji: "🌹",
-  },
-  {
-    id: "g2",
-    label: "Our Adventure",
-    bg: "linear-gradient(135deg, #C9A96E 0%, #A07840 100%)",
-    emoji: "✈️",
-  },
-  {
-    id: "g3",
-    label: "The Proposal",
-    bg: "linear-gradient(135deg, #F5E6E6 0%, #D4A5A5 100%)",
-    emoji: "💍",
-  },
-  {
-    id: "g4",
-    label: "Engagement",
-    bg: "linear-gradient(135deg, #F7EDD8 0%, #C9A96E 100%)",
-    emoji: "🥂",
-  },
-  {
-    id: "g5",
-    label: "Together",
-    bg: "linear-gradient(135deg, #B07070 0%, #D4A5A5 100%)",
-    emoji: "💑",
-  },
-  {
-    id: "g6",
-    label: "Our Story",
-    bg: "linear-gradient(135deg, #A07840 0%, #C9A96E 100%)",
-    emoji: "📖",
-  },
-];
+// const galleryItems = [
+//   {
+//     id: "g1",
+//     label: "The First Meet",
+//     bg: "linear-gradient(135deg, #D4A5A5 0%, #C9A96E 100%)",
+//     emoji: "🌹",
+//   },
+//   {
+//     id: "g2",
+//     label: "Our Adventure",
+//     bg: "linear-gradient(135deg, #C9A96E 0%, #A07840 100%)",
+//     emoji: "✈️",
+//   },
+//   {
+//     id: "g3",
+//     label: "The Proposal",
+//     bg: "linear-gradient(135deg, #F5E6E6 0%, #D4A5A5 100%)",
+//     emoji: "💍",
+//   },
+//   {
+//     id: "g4",
+//     label: "Engagement",
+//     bg: "linear-gradient(135deg, #F7EDD8 0%, #C9A96E 100%)",
+//     emoji: "🥂",
+//   },
+//   {
+//     id: "g5",
+//     label: "Together",
+//     bg: "linear-gradient(135deg, #B07070 0%, #D4A5A5 100%)",
+//     emoji: "💑",
+//   },
+//   {
+//     id: "g6",
+//     label: "Our Story",
+//     bg: "linear-gradient(135deg, #A07840 0%, #C9A96E 100%)",
+//     emoji: "📖",
+//   },
+// ];
 
 const timeline = [
   {
@@ -230,7 +230,7 @@ export default function Home() {
               opacity: 0,
             }}
           >
-            Ranto
+            Ranto S.T.
           </h1>
 
           {/* Ampersand */}
@@ -260,7 +260,7 @@ export default function Home() {
               opacity: 0,
             }}
           >
-            Enjel
+            Enjel Violani S.Kom.
           </h1>
 
           {/* Date */}
