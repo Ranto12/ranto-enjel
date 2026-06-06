@@ -146,7 +146,7 @@ export default function Home() {
         {/* Background image */}
         <div style={{ position: "absolute", inset: 0 }}>
           <Image
-            src="/hero-bg.png"
+            src="/photo-7.jpg"
             alt="Wedding background"
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
@@ -196,6 +196,7 @@ export default function Home() {
               border: "1px solid rgba(201, 169, 110, 0.5)",
               padding: "7px 24px",
               borderRadius: "30px",
+              opacity: 100,
             }}
           >
             Wedding Invitation
@@ -230,22 +231,22 @@ export default function Home() {
               opacity: 0,
             }}
           >
-            Ranto S.T.
+            Ranto
           </h1>
 
           {/* Ampersand */}
           <div
             className="animate-fadeInUp animate-float"
             style={{
-              fontSize: "clamp(36px, 6vw, 56px)",
+              fontSize: "clamp(56px, 6vw, 100px)",
               color: "var(--gold-light)",
               margin: "4px 0",
               fontFamily: "'Great Vibes', cursive",
               animationDelay: "0.6s",
-              opacity: 0,
+              opacity: 90,
             }}
           >
-            &amp;
+            ♥
           </div>
 
           {/* Bride Name */}
@@ -260,7 +261,7 @@ export default function Home() {
               opacity: 0,
             }}
           >
-            Enjel Violani S.Kom.
+            Enjel
           </h1>
 
           {/* Date */}

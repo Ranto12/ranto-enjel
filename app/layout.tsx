@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import "./globals.css";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Ranto & Enjel — Wedding Invitation",
@@ -23,13 +23,13 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <Link rel="preconnect" href="https://fonts.googleapis.com" />
-        <Link
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          // crossOrigin="anonymous"
+          crossOrigin="anonymous"
         />
-        <Link
+        <link
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
           rel="stylesheet"
         />
