@@ -287,7 +287,7 @@ function PhotoCard({
   width,
   onClick,
 }: {
-  photo: { src: string; label: string; sub: string };
+  photo: { src: string; label?: string; sub?: string };
   width: number;
   onClick: () => void;
 }) {
@@ -319,7 +319,7 @@ function PhotoCard({
       {/* Photo */}
       <Image
         src={photo.src}
-        alt={photo.label}
+        alt={photo.label || "Photo"}
         fill
         sizes="320px"
         style={{
@@ -461,7 +461,7 @@ function Lightbox({
   onPrev,
   onNext,
 }: {
-  photos: { src: string; label: string; sub: string }[];
+  photos: { src: string; label?: string; sub?: string }[];
   current: number;
   onClose: () => void;
   onPrev: () => void;
@@ -578,7 +578,7 @@ function Lightbox({
           <Image
             key={photo.src}
             src={photo.src}
-            alt={photo.label}
+            alt={photo?.label || "Photo"}
             fill
             sizes="880px"
             style={{ objectFit: "cover", animation: "fadeIn 0.35s ease" }}
@@ -661,7 +661,7 @@ function Lightbox({
             >
               <Image
                 src={p.src}
-                alt={p.label}
+                alt={p.label || "Photo"}
                 fill
                 sizes="60px"
                 style={{ objectFit: "cover" }}
