@@ -4,21 +4,21 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const photos = [
-  { src: "/photo-1.jpg", label: "Rafael & Ariana", sub: "Golden Hour Portrait" },
-  { src: "/photo-2.jpg", label: "The Ceremony", sub: "Aisle of Love" },
-  { src: "/photo-3.jpg", label: "Bouquet & Rings", sub: "Little Details" },
-  { src: "/photo-4.jpg", label: "First Dance", sub: "Under the Chandelier" },
-  { src: "/photo-5.jpg", label: "The Reception", sub: "Table of Dreams" },
-  { src: "/photo-6.jpg", label: "Garden Walk", sub: "Together Forever" },
-  { src: "/photo-7.jpg", label: "Wedding Cake", sub: "Sweet Moments" },
-  { src: "/photo-8.jpg", label: "Getting Ready", sub: "Before the Magic" },
+  { src: "/photo-1.jpg" },
+  { src: "/photo-2.jpg" },
+  { src: "/photo-3.jpg" },
+  { src: "/photo-4.jpg" },
+  { src: "/photo-5.jpg" },
+  { src: "/photo-6.jpg" },
+  { src: "/photo-7.jpg" },
+  { src: "/photo-8.jpg" },
 ];
 
 export default function PhotoGallery() {
   const trackRef = useRef<HTMLDivElement>(null);
   const animFrameRef = useRef<number | null>(null);
-  const speedRef = useRef(0.5);        // px per frame
-  const posRef = useRef(0);          // running offset
+  const speedRef = useRef(0.5); // px per frame
+  const posRef = useRef(0); // running offset
   const isHoverRef = useRef(false);
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -93,7 +93,9 @@ export default function PhotoGallery() {
   // ── lightbox nav ──────────────────────────────────────────
   const closeLightbox = () => setLightbox(null);
   const prevPhoto = () =>
-    setLightbox((i) => (i === null ? null : (i - 1 + photos.length) % photos.length));
+    setLightbox((i) =>
+      i === null ? null : (i - 1 + photos.length) % photos.length,
+    );
   const nextPhoto = () =>
     setLightbox((i) => (i === null ? null : (i + 1) % photos.length));
 
@@ -151,8 +153,19 @@ export default function PhotoGallery() {
         </p>
 
         {/* gold divider */}
-        <div className="gold-divider" style={{ maxWidth: "300px", margin: "20px auto 0" }}>
-          <span style={{ color: "var(--gold)", fontSize: "18px", padding: "0 10px" }}>✦</span>
+        <div
+          className="gold-divider"
+          style={{ maxWidth: "300px", margin: "20px auto 0" }}
+        >
+          <span
+            style={{
+              color: "var(--gold)",
+              fontSize: "18px",
+              padding: "0 10px",
+            }}
+          >
+            ✦
+          </span>
         </div>
       </div>
 
@@ -244,7 +257,8 @@ export default function PhotoGallery() {
               (e.target as HTMLButtonElement).style.transform = "scale(1.6)";
             }}
             onMouseLeave={(e) => {
-              (e.target as HTMLButtonElement).style.background = "var(--gold-light)";
+              (e.target as HTMLButtonElement).style.background =
+                "var(--gold-light)";
               (e.target as HTMLButtonElement).style.transform = "scale(1)";
             }}
           />
@@ -295,8 +309,11 @@ function PhotoCard({
         boxShadow: hovered
           ? "0 24px 60px rgba(61,48,48,0.25), 0 0 0 1px rgba(201,169,110,0.3)"
           : "0 8px 30px rgba(61,48,48,0.12)",
-        transform: hovered ? "translateY(-6px) scale(1.015)" : "translateY(0) scale(1)",
-        transition: "transform 0.45s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.45s ease",
+        transform: hovered
+          ? "translateY(-6px) scale(1.015)"
+          : "translateY(0) scale(1)",
+        transition:
+          "transform 0.45s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.45s ease",
       }}
     >
       {/* Photo */}
@@ -333,7 +350,8 @@ function PhotoCard({
           left: 0,
           right: 0,
           height: "3px",
-          background: "linear-gradient(to right, transparent, var(--gold), transparent)",
+          background:
+            "linear-gradient(to right, transparent, var(--gold), transparent)",
           opacity: hovered ? 1 : 0,
           transition: "opacity 0.4s ease",
         }}
@@ -403,7 +421,14 @@ function PhotoCard({
               justifyContent: "center",
             }}
           >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold-light)" strokeWidth="2">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--gold-light)"
+              strokeWidth="2"
+            >
               <circle cx="11" cy="11" r="8" />
               <path d="m21 21-4.35-4.35" />
               <path d="M11 8v6M8 11h6" />
@@ -622,7 +647,10 @@ function Lightbox({
                 height: "60px",
                 borderRadius: "4px",
                 overflow: "hidden",
-                border: i === current ? "2px solid var(--gold)" : "2px solid transparent",
+                border:
+                  i === current
+                    ? "2px solid var(--gold)"
+                    : "2px solid transparent",
                 cursor: "pointer",
                 padding: 0,
                 background: "none",
@@ -631,7 +659,13 @@ function Lightbox({
                 position: "relative",
               }}
             >
-              <Image src={p.src} alt={p.label} fill sizes="60px" style={{ objectFit: "cover" }} />
+              <Image
+                src={p.src}
+                alt={p.label}
+                fill
+                sizes="60px"
+                style={{ objectFit: "cover" }}
+              />
             </button>
           ))}
         </div>

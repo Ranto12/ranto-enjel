@@ -4,12 +4,22 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 
-const MusicPlayer = dynamic(() => import("./components/MusicPlayer"), { ssr: false });
-const PetalRain = dynamic(() => import("./components/PetalRain"), { ssr: false });
-const Countdown = dynamic(() => import("./components/Countdown"), { ssr: false });
+const MusicPlayer = dynamic(() => import("./components/MusicPlayer"), {
+  ssr: false,
+});
+const PetalRain = dynamic(() => import("./components/PetalRain"), {
+  ssr: false,
+});
+const Countdown = dynamic(() => import("./components/Countdown"), {
+  ssr: false,
+});
 const RSVPForm = dynamic(() => import("./components/RSVPForm"), { ssr: false });
-const PhotoGallery = dynamic(() => import("./components/PhotoGallery"), { ssr: false });
-const MessagesSection = dynamic(() => import("./components/MessagesSection"), { ssr: false });
+const PhotoGallery = dynamic(() => import("./components/PhotoGallery"), {
+  ssr: false,
+});
+const MessagesSection = dynamic(() => import("./components/MessagesSection"), {
+  ssr: false,
+});
 
 // ========== Gallery placeholder images (using gradient + emoji) ==========
 const galleryItems = [
@@ -96,7 +106,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.12 },
     );
 
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
@@ -156,7 +166,8 @@ export default function Home() {
             left: 0,
             right: 0,
             height: "3px",
-            background: "linear-gradient(to right, transparent, var(--gold), transparent)",
+            background:
+              "linear-gradient(to right, transparent, var(--gold), transparent)",
           }}
         />
 
@@ -261,7 +272,10 @@ export default function Home() {
               opacity: 0,
             }}
           >
-            <div className="gold-divider" style={{ maxWidth: "300px", margin: "0 auto 16px" }}>
+            <div
+              className="gold-divider"
+              style={{ maxWidth: "300px", margin: "0 auto 16px" }}
+            >
               <span
                 className="font-elegant"
                 style={{
@@ -272,7 +286,7 @@ export default function Home() {
                   padding: "0 12px",
                 }}
               >
-                27 September 2027
+                21 Maret 2027
               </span>
             </div>
             <p
@@ -302,12 +316,27 @@ export default function Home() {
             }}
           >
             <a href="#rsvp" className="btn-gold" id="hero-rsvp-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
               </svg>
               Konfirmasi Hadir
             </a>
-            <a href="#detail" className="btn-outline-gold" id="hero-detail-btn" style={{ color: "var(--gold-light)", borderColor: "rgba(201,169,110,0.6)" }}>
+            <a
+              href="#detail"
+              className="btn-outline-gold"
+              id="hero-detail-btn"
+              style={{
+                color: "var(--gold-light)",
+                borderColor: "rgba(201,169,110,0.6)",
+              }}
+            >
               Lihat Detail
             </a>
           </div>
@@ -391,7 +420,10 @@ export default function Home() {
             ﷽
           </div>
 
-          <div className="gold-divider" style={{ margin: "0 auto 32px", maxWidth: "400px" }}>
+          <div
+            className="gold-divider"
+            style={{ margin: "0 auto 32px", maxWidth: "400px" }}
+          >
             <span style={{ color: "var(--gold)", fontSize: "20px" }}>✦</span>
           </div>
 
@@ -405,9 +437,10 @@ export default function Home() {
               marginBottom: "16px",
             }}
           >
-            "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
-            pasangan hidup dari jenismu sendiri supaya kamu cenderung dan merasa
-            tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
+            "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+            untukmu pasangan hidup dari jenismu sendiri supaya kamu cenderung
+            dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa
+            kasih dan sayang."
           </blockquote>
           <cite
             style={{
@@ -422,7 +455,10 @@ export default function Home() {
             — QS. Ar-Ruum : 21
           </cite>
 
-          <div className="gold-divider" style={{ margin: "32px auto 0", maxWidth: "400px" }}>
+          <div
+            className="gold-divider"
+            style={{ margin: "32px auto 0", maxWidth: "400px" }}
+          >
             <span style={{ color: "var(--gold)", fontSize: "20px" }}>✦</span>
           </div>
         </div>
@@ -438,7 +474,10 @@ export default function Home() {
           backgroundColor: "var(--ivory)",
         }}
       >
-        <div className="reveal" style={{ textAlign: "center", marginBottom: "60px" }}>
+        <div
+          className="reveal"
+          style={{ textAlign: "center", marginBottom: "60px" }}
+        >
           <span className="section-badge">Mempelai</span>
           <h2
             className="font-romantic"
@@ -465,7 +504,15 @@ export default function Home() {
             justifyContent: "center",
           }}
         >
-          <div className="elegant-card reveal" style={{ textAlign: "center", flex: "1 1 260px", minWidth: "220px", maxWidth: "340px" }}>
+          <div
+            className="elegant-card reveal"
+            style={{
+              textAlign: "center",
+              flex: "1 1 260px",
+              minWidth: "220px",
+              maxWidth: "340px",
+            }}
+          >
             {/* Photo placeholder */}
             <div
               style={{
@@ -473,7 +520,8 @@ export default function Home() {
                 height: "clamp(100px, 20vw, 140px)",
                 borderRadius: "50%",
                 margin: "0 auto 20px",
-                background: "linear-gradient(135deg, var(--gold-light), var(--gold))",
+                background:
+                  "linear-gradient(135deg, var(--gold-light), var(--gold))",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -485,10 +533,7 @@ export default function Home() {
             >
               🤵
             </div>
-            <span
-              className="section-badge"
-              style={{ marginBottom: "8px" }}
-            >
+            <span className="section-badge" style={{ marginBottom: "8px" }}>
               Mempelai Pria
             </span>
             <h3
@@ -560,14 +605,23 @@ export default function Home() {
           </div>
 
           {/* Bride */}
-          <div className="elegant-card reveal" style={{ textAlign: "center", flex: "1 1 260px", minWidth: "220px", maxWidth: "340px" }}>
+          <div
+            className="elegant-card reveal"
+            style={{
+              textAlign: "center",
+              flex: "1 1 260px",
+              minWidth: "220px",
+              maxWidth: "340px",
+            }}
+          >
             <div
               style={{
                 width: "clamp(100px, 20vw, 140px)",
                 height: "clamp(100px, 20vw, 140px)",
                 borderRadius: "50%",
                 margin: "0 auto 20px",
-                background: "linear-gradient(135deg, var(--rose-light), var(--rose-deep))",
+                background:
+                  "linear-gradient(135deg, var(--rose-light), var(--rose-deep))",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -620,7 +674,10 @@ export default function Home() {
         </div>
 
         {/* Floral divider */}
-        <div className="reveal" style={{ textAlign: "center", marginTop: "60px" }}>
+        <div
+          className="reveal"
+          style={{ textAlign: "center", marginTop: "60px" }}
+        >
           <Image
             src="/floral-divider.png"
             alt="Floral decoration"
@@ -717,7 +774,7 @@ export default function Home() {
                 color: "rgba(247, 237, 216, 0.7)",
               }}
             >
-              Senin, 27 September 2027 · 09.00 WIB
+              Minggu, 21 Maret 2027 · 09.00 WIB
             </p>
           </div>
         </div>
@@ -733,7 +790,10 @@ export default function Home() {
           backgroundColor: "var(--champagne)",
         }}
       >
-        <div className="reveal" style={{ textAlign: "center", marginBottom: "56px" }}>
+        <div
+          className="reveal"
+          style={{ textAlign: "center", marginBottom: "56px" }}
+        >
           <span className="section-badge">Rangkaian Acara</span>
           <h2
             className="font-romantic"
@@ -764,7 +824,11 @@ export default function Home() {
             </span>
             <h3
               className="font-playfair"
-              style={{ fontSize: "22px", color: "var(--charcoal)", marginBottom: "16px" }}
+              style={{
+                fontSize: "22px",
+                color: "var(--charcoal)",
+                marginBottom: "16px",
+              }}
             >
               Ijab Qabul
             </h3>
@@ -777,7 +841,7 @@ export default function Home() {
               }}
             >
               {[
-                { icon: "📅", text: "Senin, 27 September 2027" },
+                { icon: "📅", text: "Minggu, 21 Maret 2027" },
                 { icon: "⏰", text: "09.00 – 11.00 WIB" },
                 { icon: "📍", text: "Kediaman Enjel violani, Lampung Selatan" },
               ].map(({ icon, text }) => (
@@ -872,7 +936,10 @@ export default function Home() {
           backgroundColor: "var(--ivory)",
         }}
       >
-        <div className="reveal" style={{ textAlign: "center", marginBottom: "60px" }}>
+        <div
+          className="reveal"
+          style={{ textAlign: "center", marginBottom: "60px" }}
+        >
           <span className="section-badge">Kisah Cinta</span>
           <h2
             className="font-romantic"
@@ -903,7 +970,8 @@ export default function Home() {
               top: 0,
               bottom: 0,
               width: "1px",
-              background: "linear-gradient(to bottom, transparent, var(--gold-light) 10%, var(--gold-light) 90%, transparent)",
+              background:
+                "linear-gradient(to bottom, transparent, var(--gold-light) 10%, var(--gold-light) 90%, transparent)",
               transform: "translateX(-50%)",
             }}
           />
@@ -981,7 +1049,8 @@ export default function Home() {
                     width: "44px",
                     height: "44px",
                     borderRadius: "50%",
-                    background: "linear-gradient(135deg, var(--gold-light), var(--gold))",
+                    background:
+                      "linear-gradient(135deg, var(--gold-light), var(--gold))",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -1052,56 +1121,6 @@ export default function Home() {
       {/* ═══════════════════════════════════════
           SECTION 8 — RSVP
       ══════════════════════════════════════════ */}
-      {/* <section
-        id="rsvp"
-        style={{
-          padding: "clamp(60px, 10vw, 120px) clamp(20px, 5vw, 64px)",
-          background: `
-            radial-gradient(circle at 20% 50%, rgba(212, 165, 165, 0.15) 0%, transparent 50%),
-            radial-gradient(circle at 80% 50%, rgba(201, 169, 110, 0.1) 0%, transparent 50%),
-            var(--ivory)
-          `,
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "600px",
-            margin: "0 auto",
-          }}
-        >
-          <div className="reveal" style={{ textAlign: "center", marginBottom: "48px" }}>
-            <span className="section-badge">RSVP</span>
-            <h2
-              className="font-romantic"
-              style={{
-                fontSize: "clamp(36px, 6vw, 64px)",
-                color: "var(--charcoal)",
-                marginTop: "4px",
-                marginBottom: "12px",
-              }}
-            >
-              Konfirmasi Kehadiran
-            </h2>
-            <p
-              className="font-elegant"
-              style={{
-                fontSize: "clamp(15px, 2.5vw, 18px)",
-                fontStyle: "italic",
-                color: "var(--soft-brown)",
-              }}
-            >
-              Kehadiran Anda adalah anugerah terbesar bagi kami.
-              <br />
-              Mohon konfirmasi sebelum{" "}
-              <strong style={{ color: "var(--gold-dark)" }}>31 Agustus 2025</strong>.
-            </p>
-          </div>
-
-          <div className="elegant-card reveal">
-            <RSVPForm />
-          </div>
-        </div>
-      </section> */}
 
       {/* ═══════════════════════════════════════
           SECTION 9 — MESSAGES
@@ -1168,11 +1187,22 @@ export default function Home() {
               marginBottom: "32px",
             }}
           >
-            14 · 09 · 2026
+            21 · 03 · 2027
           </p>
 
-          <div className="gold-divider" style={{ maxWidth: "300px", margin: "0 auto 32px" }}>
-            <span style={{ color: "var(--gold)", fontSize: "18px", padding: "0 12px" }}>✦</span>
+          <div
+            className="gold-divider"
+            style={{ maxWidth: "300px", margin: "0 auto 32px" }}
+          >
+            <span
+              style={{
+                color: "var(--gold)",
+                fontSize: "18px",
+                padding: "0 12px",
+              }}
+            >
+              ✦
+            </span>
           </div>
 
           <p
@@ -1206,7 +1236,7 @@ export default function Home() {
                 color: "rgba(247, 237, 216, 0.4)",
               }}
             >
-              Made with ♥ · 2025
+              Made with ♥ · {new Date().getFullYear()}
             </p>
           </div>
         </div>

@@ -10,7 +10,7 @@ interface TimeLeft {
 }
 
 // Wedding date: September 14, 2025
-const WEDDING_DATE = new Date("2026-09-14T09:00:00");
+const WEDDING_DATE = new Date("2027-03-21T09:00:00");
 
 export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -57,7 +57,11 @@ export default function Countdown() {
     return (
       <p
         className="font-romantic"
-        style={{ fontSize: "clamp(28px, 5vw, 42px)", color: "white", textAlign: "center" }}
+        style={{
+          fontSize: "clamp(28px, 5vw, 42px)",
+          color: "white",
+          textAlign: "center",
+        }}
       >
         We Are Married! 💍
       </p>
