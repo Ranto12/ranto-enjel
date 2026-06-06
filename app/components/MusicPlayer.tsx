@@ -10,7 +10,7 @@ export default function MusicPlayer() {
   useEffect(() => {
     // Create audio element with a royalty-free romantic piano piece
     const audio = new Audio(
-      "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+      "/EXLUSIVE KEKEY X EMBI PUS PUS ALABAR TERBRU DJ TAK RELA VERSI REMIX LAMPUNG ｜｜ BUJANG ORGEN 2025 [HV-odVSY2CM].mp3",
     );
     audio.loop = true;
     audio.volume = 0.45;
@@ -47,7 +47,9 @@ export default function MusicPlayer() {
       }}
     >
       {/* Song Label */}
-      <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.3 }}>
+      <div
+        style={{ display: "flex", flexDirection: "column", lineHeight: 1.3 }}
+      >
         <span
           style={{
             fontFamily: "'Great Vibes', cursive",
@@ -91,7 +93,9 @@ export default function MusicPlayer() {
           }}
           aria-hidden="true"
         >
-          <span style={{ fontSize: "14px", color: "var(--gold)", opacity: 0.5 }}>
+          <span
+            style={{ fontSize: "14px", color: "var(--gold)", opacity: 0.5 }}
+          >
             ♫
           </span>
         </div>
